@@ -66,6 +66,10 @@ let ver = "korean_voc_from_book_v=>1";
 // qurilmani tekshirish
 console.log(ver);
 
+VOCC.forEach(element => {
+    console.log("sas", element.length)
+});
+
 const userAgent = navigator.userAgent;
 if (/mobile/i.test(userAgent)) {
     ThisDevice = "Phone";
