@@ -62,7 +62,7 @@ let CardWords = {
     korean: "",
     uzbek: ""
 };
-let ver = "korean_voc_from_book_v=>1";
+let ver = "korean_voc_from_book_v=>1.2";
 // qurilmani tekshirish
 console.log(ver);
 
@@ -266,13 +266,19 @@ function StartOptionTest() {
 function ChoosedOption(nth_) {
     if (nth_ === RightAnswer) {
         test.option.a[nth_].style = `background-color: green;`;
+        setTimeout(() => {
+            StartOptionTest();
+        }, 1250);
     } else {
         test.option.a[nth_].style = `background-color: red;`;
         test.option.a[RightAnswer].style = `background-color: green;`;
+        setTimeout(() => {
+            StartOptionTest();
+        }, 2500);
     }
-    setTimeout(() => {
+    /*setTimeout(() => {
         StartOptionTest();
-    }, 1250);
+    }, 1250);*/
 }
 
 function SoundBtn() {
